@@ -1,0 +1,31 @@
+blueprint:
+  name: Simple Monitored Switch (State Change Triggered)
+  description: de-activate an activated switch after a fixed delay (hh-mm-ss)
+  domain: automation
+  input:
+    switch_target:
+      name: Monitored Switch
+      description: Switch to be monitored
+      selector:
+        entity:
+          domain: switch
+    switch_delay:
+      name: Switch Off Delay
+      description: Delay to switch off (hh-mm-ss)
+      default: "00:15"
+      selector:
+        time:
+
+trigger:
+  platform: state
+  entity_id: !input switch_target
+  from: "off"
+  to: "on"
+
+action:
+  - delay: !input switch_delay
+  - service: switch.turn_off
+    entity_id: !input switch_target
+          
+mode: restart
+max_exceeded: silent
