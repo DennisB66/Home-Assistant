@@ -1,9 +1,0 @@
-{
-  "domain": "buienradar_daily_forecast",
-  "name": "Buienradar Daily Forecast",
-  "version": "0.1.0",
-  "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/example_sensor/",
-  "dependencies": [],
-  "codeowners": [],
-  "requirements": []
-}
