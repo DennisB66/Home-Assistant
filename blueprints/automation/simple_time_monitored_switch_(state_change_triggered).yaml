@@ -1,6 +1,6 @@
 blueprint:
-  name: Simple Monitored Switch (State Change Triggered)
-  description: de-activate an activated switch after a fixed delay (hh-mm-ss)
+  name: Simple Time Monitored Switch (State Change Triggered)
+  description: turn off an activated switch after a specific delay (hh:mm:ss)
   domain: automation
   input:
     switch_target:
