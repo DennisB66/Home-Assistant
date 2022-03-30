@@ -12,7 +12,7 @@ blueprint:
     switch_delay:
       name: Switch Off Delay
       description: Delay to switch off (hh-mm-ss)
-      default: "00:15"
+      default: "00:15:00"
       selector:
         time:
 
