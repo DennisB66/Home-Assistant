@@ -69,7 +69,7 @@ class RainForecastSensor(Entity):
         return self._data
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         return {
             ATTR_LAT : self._lat,
             ATTR_LON : self._lon,
